@@ -1,0 +1,27 @@
+﻿@model IEnumerable<WebApplication1.DataModel.Candidate>
+
+@{
+    ViewData["Title"] = "Votes";
+}
+
+<table style="width:100%">
+    <tr>
+        <th>Number</th>
+        <th>Name</th>
+        <th>Votes</th>
+    </tr>
+@foreach (var item in Model)
+{
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Votes)
+        </td>
+    </tr>
+}
+</table>

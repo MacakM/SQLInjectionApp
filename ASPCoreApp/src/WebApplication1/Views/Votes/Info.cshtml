@@ -1,0 +1,11 @@
+﻿@model WebApplication1.Models.CandidateInfoModel
+
+@{
+    ViewData["Title"] = "Information";
+}
+@using (Html.BeginForm())
+{
+    @Html.TextBoxFor(model => model.CandidateId)
+    <input type="submit" Value="Find"/>
+    @Html.DisplayFor(model => model.CandidateInfo)
+}
